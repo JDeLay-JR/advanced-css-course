@@ -40,4 +40,49 @@ body {
     background-position: top;
     /* Work clockwise from top-left; X Y values; use Clippy to generate shapes for this property */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+}
+
+.logo-box {
+    /* References parent element whose position is relative */
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    /* Specify height and width will be figured out by browser */
+    height: 35px;
+}
+
+.header-text-box {
+    /* In relation to parent element; 
+    pushes outside left & top of container to the center of parent*/
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    /* In relation to element itself; 
+    slides container back a little (left and top) 
+    to remain responsive and perfectly center */
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    /* block takes up 100% width and inserts a line break before and after */
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+}
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.4px;
 }
