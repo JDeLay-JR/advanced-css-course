@@ -6,3 +6,38 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* CSS RESET & PROJECT WIDE DEFS */
+* {
+    margin: 0;
+    padding: 0;
+    /* Do not add border/padding to total width/height of elements */
+    box-sizing: border-box;
+}
+
+/* PROJECT WIDE DEFS  */
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px;
+}
+/* END OF CSS RESET & PROJECT WIDE DEFS */
+
+.header {
+    height: 95vh;
+    /* Gradient always first, can speciffy direction */
+    background-image: linear-gradient(
+        to right bottom,
+        hsla(111, 55%, 64%, 0.8),
+        rgba(39, 179, 133, 0.8)), 
+         url('../img/hero.jpg');
+    /* Attempts to fit image inside element */
+    background-size: cover;
+    /* Ensures top of img remains at top of el on resize */
+    background-position: top;
+    /* Work clockwise from top-left; X Y values; use Clippy to generate shapes for this property */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
