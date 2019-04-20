@@ -53,7 +53,9 @@ body {
 .logo {
     /* Specify height and width will be figured out by browser */
     height: 35px;
+    animation: moveInLeft 1s ease-in;
 }
+
 
 .header-text-box {
     /* In relation to parent element; 
@@ -71,6 +73,8 @@ body {
 .heading-primary {
     color: #ffffff;
     text-transform: uppercase;
+    /* Prevent shaking on elements that animate inside this element */
+    backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -79,10 +83,50 @@ body {
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 .heading-primary-sub {
     display: block;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.4px;
+    /* Two props, name and duration */
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+/* Animation Definitions */
+
+@keyframes moveInLeft {
+    /* Browsers are optimized for opacity and transform */
+    /* Start */
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    /* During Animation */
+    /* Finish */
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px)
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
 }
