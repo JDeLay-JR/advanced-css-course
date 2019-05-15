@@ -15,14 +15,18 @@ Dark green: #28b485
     box-sizing: border-box;
 }
 
+html {
+    font-size: 10px;
+}
+
 /* PROJECT WIDE DEFS  */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777777;
-    padding: 30px;
+    padding: 3rem;
 }
 /* END OF CSS RESET & PROJECT WIDE DEFS */
 
@@ -46,13 +50,13 @@ body {
 .logo-box {
     /* References parent element whose position is relative */
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
     /* Specify height and width will be figured out by browser */
-    height: 35px;
+    height: 3.5rem;
     animation: moveInLeft 1s ease-in;
 }
 
@@ -76,22 +80,22 @@ body {
     text-transform: uppercase;
     /* Prevent shaking on elements that animate inside this element */
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-primary-main {
     /* block takes up 100% width and inserts a line break before and after */
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation: moveInLeft 1s ease-out;
 }
 .heading-primary-sub {
     display: block;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.75rem;
     /* Two props, name and duration */
     animation-name: moveInRight;
     animation-duration: 1s;
@@ -105,10 +109,10 @@ body {
     /* Start */
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
     /* During Animation */
     /* Finish */
@@ -120,10 +124,10 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px)
+        transform: translateX(10rem)
     }
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
     100% {
         opacity: 1;
@@ -134,10 +138,10 @@ body {
 @keyframes moveInBottom{
     0% {
         opacity: 0;
-        transform: translateY(50px);
+        transform: translateY(5rem);
     }
     80% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
     100% {
         opacity: 1;
@@ -152,8 +156,8 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 100px;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
     display: inline-block;
     transition: all .3s;
     position: relative;
@@ -167,13 +171,13 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.20);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.20);
 }
 
 /* When clicked */
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0,0,0,.20);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.20);
 }
 
 .btn-white {
@@ -188,7 +192,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
